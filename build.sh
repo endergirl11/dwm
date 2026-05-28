@@ -1,7 +1,12 @@
 DESKTOP_FILE="/usr/share/xsessions/dwm.desktop"
 mkdir -p bin
 
-cc source/drw.c source/util.c source/main.c -I /usr/X10R6/include -I /usr/include/freetype2 -I ./source -I ./headers -L /usr/X11R6/lib -lXinerama -lfontconfig -lXft -lX11 -lm -o bin/dwm -Wno-deprecated-declarations -Wno-pragma-once-outside-header
+cc source/drw.c source/util.c source/main.c \
+-I /usr/X10R6/include \
+-I /usr/include/freetype2 -I ./source -I ./headers \
+-L /usr/X11R6/lib -lXinerama -lfontconfig -lXft -lX11 -lm \
+-Wno-deprecated-declarations -Wno-pragma-once-outside-header \
+-o bin/dwm
 compile_status=$?
 
 if [ "$EUID" -eq 0 ]; then
