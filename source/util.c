@@ -1,5 +1,4 @@
-#ifndef DWM_UTIL_H
-#define DWM_UTIL_H
+#pragma once
 
 /* See LICENSE file for copyright and license details. */
 #include <stdarg.h>
@@ -33,4 +32,3 @@ void *ecalloc(size_t nmemb, size_t size) {
     die("calloc:");
   return p;
 }
-#endif

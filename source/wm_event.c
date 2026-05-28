@@ -295,34 +295,5 @@ void run(void) {
   while (running && !XNextEvent(dpy, &ev))
     if (handler[ev.type]) {
       handler[ev.type](&ev); /* call handler */
-
-#ifdef LUA_RC
-      switch (ev.type) {
-      case KeyPress:
-        lua_getglobal(L, "_DWM_event");
-
-        if (lua_isfunction(L, -1)) {
-          lua_newtable(L);
-          lua_pushstring(L, "type");
-          lua_pushnumber(L, (int)EVENT_DWMHANDLED_KEYPRESS);
-          lua_settable(L, -3);
-
-          lua_pushstring(L, "keysym");
-          lua_pushnumber(L, ev.xkey.keycode);
-          lua_settable(L, -3);
-
-          lua_pushstring(L, "modmask");
-          lua_pushnumber(L, ev.xkey.state);
-          lua_settable(L, -3);
-
-          if (lua_pcall(L, 1, 0, 0) != LUA_OK) {
-            printf("Error occurred in _DWM_event: %s\n", lua_tostring(L, -1));
-            return;
-          }
-        }
-
-        break;
-      }
-#endif
     }
 }

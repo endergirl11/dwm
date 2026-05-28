@@ -1,5 +1,4 @@
-#ifndef DWM_COLORS_H
-#define DWM_COLORS_H
+#pragma once 
 
 static const char col_gray1[] = "#222222";
 static const char col_gray2[] = "#444444";
@@ -15,5 +14,3 @@ static const char col_yel_orange[] = "#FFB343";
 static const char col_light_purple[] = "#DAB1DA";
 static const char col_dark_purple[] = "#35063e";
 static const char col_darker_purple[] = "#301934";
-
-#endif

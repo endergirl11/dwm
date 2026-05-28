@@ -1,5 +1,4 @@
-#ifndef DWM_DRW_H
-#define DWM_DRW_H
+#pragma once
 
 /* See LICENSE file for copyright and license details. */
 #include <X11/Xft/Xft.h>
@@ -427,4 +426,3 @@ void drw_cur_free(Drw *drw, Cur *cursor) {
   XFreeCursor(drw->dpy, cursor->cursor);
   free(cursor);
 }
-#endif
