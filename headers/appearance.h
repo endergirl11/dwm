@@ -10,13 +10,13 @@ static const int topbar = 1;            /* 0 means bottom bar */
 static const char *fonts[] = {"monospace:size=10"};
 static const char dmenufont[] = "monospace:size=10";
 
-static const char* const scheme_normal_fg = col_gray3;
-static const char* const scheme_normal_bg = col_gray1;
+static const char* const scheme_normal_fg = col_white;
+static const char* const scheme_normal_bg = col_black;
 static const char* const scheme_normal_border = col_gray2;
 
-static const char* const scheme_sel_fg = col_gray4;
-static const char* const scheme_sel_bg = col_cyan;
-static const char* const scheme_sel_border = col_cyan;
+static const char* const scheme_sel_fg = col_white;
+static const char* const scheme_sel_bg = col_darker_purple;
+static const char* const scheme_sel_border = col_darker_purple;
 
 static const char *colors[2][3] = {
     /*               fg         bg         border   */

@@ -35,7 +35,7 @@ void handle_args(int argc, char *argv[]) {
 }
 
 int error_handler(Display *display, XErrorEvent *event) {
-    // TODO: Handle error handling //
+    // TODO: Handle errors //
     return 0;
 }
 
@@ -58,12 +58,17 @@ int main(int argc, char *argv[]) {
   XSetErrorHandler(error_handler);
   scan();
 
-  if (fork() == 0) {
+  FILE* run_file = fopen(script_path,"r");
+
+  if (run_file != NULL && fork() == 0) {
+    fclose(run_file);
     char* args[] = {script_path,NULL};
     execv(script_path,args);
-    // TODO: generate log file 
+    // TODO: Generate log file
     perror("Error: ~/.config/dwm/run");
     exit(1);
+  } else if (run_file != NULL) {
+      fclose(run_file);
   }
 
   run();

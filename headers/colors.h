@@ -10,5 +10,10 @@ static const char col_cyan[] = "#005577";
 static const char col_black[] = "#000000";
 static const char col_white[] = "#ffffff";
 static const char col_pink[] = "#FFC0CB";
+static const char col_amber[] = "#FFBF00";
+static const char col_yel_orange[] = "#FFB343";
+static const char col_light_purple[] = "#DAB1DA";
+static const char col_dark_purple[] = "#35063e";
+static const char col_darker_purple[] = "#301934";
 
 #endif

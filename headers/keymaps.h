@@ -16,10 +16,6 @@ static Key keys[] = {
     {MODKEY, XK_d, spawn, {.v = COMMAND_PROGRAM_LAUNCHER}},
     {MODKEY, XK_Return, spawn, {.v = COMMAND_TERMINAL}},
     {MODKEY | ShiftMask, XK_s, spawn, {.v = COMMAND_SCREENSHOT}},
-    {MODKEY | ShiftMask, XK_v, spawn, {.v = COMMAND_VOLUME}},
-
-    {MODKEY, XK_f, spawn, {.v = COMMAND_YAZI_HOME}},
-    {MODKEY, XK_u, spawn, {.v = COMMAND_YAZI_DOWNLOADS}},
 
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},

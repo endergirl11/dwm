@@ -556,8 +556,7 @@ void updatesizehints(Client *c) {
 
 void updatestatus(void) {
   if (!gettextprop(root, XA_WM_NAME, stext, sizeof(stext))) {
-    // strcpy(stext, "dwm_sk " VERSION);
-    strcpy(stext, error_message);
+    strcpy(stext, "dwm " VERSION);
   }
   drawbar(selmon);
 }
